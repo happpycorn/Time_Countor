@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Request to Google Sheets</title>
+  <script src="script.js"></script> <!-- 引入外部的 JavaScript 檔案 -->
+</head>
+<body>
+  <h2>發送資料到 Google Sheets</h2>
+  <form id="dataForm">
+    <label for="columnName">列名：</label>
+    <input type="text" id="columnName" name="columnName" required>
+    <br><br>
+    <label for="data">數據：</label>
+    <input type="text" id="data" name="data" required>
+    <br><br>
+    <button type="button" onclick="sendData()">送出</button>
+  </form>
+
+  <p id="responseMessage"></p>
+</body>
+</html>

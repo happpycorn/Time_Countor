@@ -1,0 +1,55 @@
+html{
+    height: 100%;
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: inherit;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #dcdcdc;
+
+    font-family: 'Dosis', 'sans-serif';
+    font-display: swap;
+}
+
+button{
+
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin: 10px;
+    border-radius: 5px; /* 圓角 */
+    padding: 10px 20px; /* 內邊距 */
+    font-size: 16px; /* 字體大小 */
+    cursor: pointer; /* 鼠標指針 */
+    transition: background-color 0.5s; /* 漸變效果 */
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.wrapper{
+    background-color: #fff;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px #bbb;
+    padding: 20px;
+    font-size: 30px;
+}

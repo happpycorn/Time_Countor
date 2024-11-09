@@ -1,0 +1,104 @@
+html{
+    height: 100%;
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: inherit;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #dcdcdc;
+
+    font-family: 'Dosis', 'sans-serif';
+    font-display: swap;
+}
+
+.wrapper{
+    height: 95%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.showBar,
+.inputBar{
+    background-color: #fff;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px #bbb;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.gradeButtons{
+    display: flex;
+    flex-direction: column;
+}
+
+.numberButtonRow{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.numberButtons{
+    display: flex;
+}
+
+.sendButton,
+.gradeButton,
+.numberButton{
+
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin: 10px;
+    border-radius: 5px; /* 圓角 */
+    padding: 10px 20px; /* 內邊距 */
+    font-size: 16px; /* 字體大小 */
+    cursor: pointer; /* 鼠標指針 */
+    transition: background-color 0.5s; /* 漸變效果 */
+}
+
+.sendButton:hover,
+.gradeButton:hover,
+.numberButton:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.gradeButton{
+    padding: 5px 50px; /* 內邊距 */
+    font-size: 14px; /* 字體大小 */
+}
+
+.gradeBar{
+    display: flex;
+    width: 20%;
+}
+
+.numberBar{
+    display: flex;
+    width: 50%;
+}
+
+.sendButton{
+    padding: 10px 50px; /* 內邊距 */
+    margin: 0;
+}

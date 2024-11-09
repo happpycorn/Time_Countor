@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Runner Record | 2024 Fhehs Run</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js"></script> <!-- 引入外部的 JavaScript 檔案 -->
+</head>
+<body>
+
+  <div class="littleWrapper">
+    <p id="responseMessage"></p>
+  </div>
+
+  <div class="wrapper">
+
+    <div class="showBar">
+
+      <div class="gradeBar">
+        <p id="gradeName">N</p>
+        <p>-</p>
+      </div>
+      
+      <div class="numberBar">
+        <p id="number"></p>
+      </div>
+
+      <button onclick="send()" class="sendButton">Send</button>
+
+    </div>
+
+    <div class="inputBar">
+
+      <div class="gradeButtons">
+        <button onclick="grade('G')" class="gradeButton">G</button>
+        <button onclick="grade('B')" class="gradeButton">B</button>
+        <button onclick="grade('N')" class="gradeButton">N</button>
+        <button onclick="grade('Y')" class="gradeButton">Y</button>
+        <button onclick="grade('K')" class="gradeButton">K</button>
+      </div>
+
+      <div class="numberButtonRow">
+
+        <div class="numberButtons">
+          <button onclick="number('7')" class="numberButton">7</button>
+          <button onclick="number('8')" class="numberButton">8</button>
+          <button onclick="number('9')" class="numberButton">9</button>
+        </div>
+      
+        <div class="numberButtons">
+          <button onclick="number('4')" class="numberButton">4</button>
+          <button onclick="number('5')" class="numberButton">5</button>
+          <button onclick="number('6')" class="numberButton">6</button>
+        </div>
+      
+        <div class="numberButtons">
+          <button onclick="number('1')" class="numberButton">1</button>
+          <button onclick="number('2')" class="numberButton">2</button>
+          <button onclick="number('3')" class="numberButton">3</button>
+        </div>
+      
+        <div class="numberButtons">
+          <button onclick="clearNumber()" class="numberButton">C</button>
+          <button onclick="number('0')" class="numberButton">0</button>
+          <button onclick="number('-')" class="numberButton">-</button>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
