@@ -1,7 +1,8 @@
-function doPost(e) {
-  // 从请求中取得数据
-  const params = JSON.parse(e.postData.contents);
+function doGet(e) {
+
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+  var params = e.parameter;
   const columnName = params.columnName; // 指定的列名
   const data = params.data; // 要追加的数据
   
@@ -14,14 +15,14 @@ function doPost(e) {
                          .setMimeType(ContentService.MimeType.JSON);
   }
 
-  // 找到该列的最底部的空行并插入数据
-  const lastRow = sheet.getRange(1, columnIndex, sheet.getLastRow()).getValues()
-                     .map(row => row[0])
-                     .lastIndexOf('') + 1;
-  const insertRow = lastRow > 0 ? lastRow + 1 : sheet.getLastRow() + 1;
+  // 向下遍歷該列，找到第一個空白的儲存格並插入資料
+  let row = 2; // 從第2行開始，假設第1行是標題
+  while (sheet.getRange(row, columnIndex).getValue() !== '') {
+    row++;
+  }
 
-  sheet.getRange(insertRow, columnIndex).setValue(data);
+  sheet.getRange(row, columnIndex).setValue(data);
 
   return ContentService.createTextOutput(JSON.stringify({ "success": true }))
-                       .setMimeType(ContentService.MimeType.JSON);
+                        .setMimeType(ContentService.MimeType.JSON);
 }
