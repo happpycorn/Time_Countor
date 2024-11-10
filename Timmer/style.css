@@ -3,6 +3,11 @@ html{
 
     overflow: hidden;
     box-sizing: border-box;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 *,
@@ -34,8 +39,8 @@ button{
     color: #000;
     margin: 10px;
     border-radius: 5px; /* 圓角 */
-    padding: 10px 20px; /* 內邊距 */
-    font-size: 16px; /* 字體大小 */
+    padding: 50px 100px; /* 內邊距 */
+    font-size: 100px; /* 字體大小 */
     cursor: pointer; /* 鼠標指針 */
     transition: background-color 0.5s; /* 漸變效果 */
 }
@@ -46,10 +51,11 @@ button:hover {
 }
 
 .wrapper{
+
     background-color: #fff;
     display: flex;
     border-radius: 10px;
     box-shadow: 0 1px 5px #bbb;
-    padding: 20px;
+    padding: 50px;
     font-size: 30px;
 }

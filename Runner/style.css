@@ -3,6 +3,11 @@ html{
 
     overflow: hidden;
     box-sizing: border-box;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 *,
@@ -42,7 +47,11 @@ body{
     border-radius: 10px;
     box-shadow: 0 1px 5px #bbb;
     padding: 20px;
-    font-size: 30px;
+    font-size: 60px;
+}
+
+.showBar{
+    padding: 30px;
 }
 
 .gradeButtons{
@@ -54,7 +63,7 @@ body{
     display: flex;
     flex-direction: column;
 
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .numberButtons{
@@ -65,13 +74,15 @@ body{
 .gradeButton,
 .numberButton{
 
+    width: 100px;
+
     background-color: #fff;
     border: 1px solid #000;
     color: #000;
     margin: 10px;
     border-radius: 5px; /* 圓角 */
-    padding: 10px 20px; /* 內邊距 */
-    font-size: 16px; /* 字體大小 */
+    padding: 10px; /* 內邊距 */
+    font-size: 50px; /* 字體大小 */
     cursor: pointer; /* 鼠標指針 */
     transition: background-color 0.5s; /* 漸變效果 */
 }
@@ -84,8 +95,8 @@ body{
 }
 
 .gradeButton{
-    padding: 5px 50px; /* 內邊距 */
-    font-size: 14px; /* 字體大小 */
+    width: 200px;
+    font-size: 32px; /* 字體大小 */
 }
 
 .gradeBar{
@@ -99,6 +110,7 @@ body{
 }
 
 .sendButton{
-    padding: 10px 50px; /* 內邊距 */
+    width: 200px;
+    font-size: 30px;
     margin: 0;
 }
